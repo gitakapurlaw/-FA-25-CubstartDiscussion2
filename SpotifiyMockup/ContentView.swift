@@ -46,10 +46,26 @@ struct BlurView: UIViewRepresentable {
 
 struct titleView: View {
     var body: some View {
-        Text("Implement Me")
-    }
-}
+        HStack {
+                   VStack(alignment: .leading) {
+                       Text("Espresso")
+                           .font(.title2)
+                           .fontWeight(.bold)
 
+                       Text("Sabrina Carpenter")
+                           .font(.subheadline)
+                           .foregroundStyle(.gray)
+                   }
+
+                   Spacer()
+
+                   Image(systemName: "plus.circle")
+                       .font(.title2)
+               }
+               .foregroundStyle(.white)
+               .padding(.horizontal)
+           }
+       }
 struct timeView: View {
     var body: some View {
         VStack {
@@ -82,13 +98,34 @@ struct timeView: View {
 
 struct playbackView: View {
     var body: some View {
-        Text("Implement Me")
-    }
-}
+        HStack {
+            Image(systemName: "shuffle")
 
+            Spacer()
+
+            Image(systemName: "backward.end.fill")
+
+            Spacer()
+
+            Image(systemName: "play.circle.fill")
+                .font(.system(size: 55))
+
+            Spacer()
+
+            Image(systemName: "forward.end.fill")
+
+            Spacer()
+
+            Image(systemName: "airplayaudio")
+        }
+        .font(.title2)
+        .foregroundStyle(.white)
+        .padding(.horizontal)
+  }
+}
 struct albumView : View {
     var body: some View {
-        Image("Image")
+        Image("Espresso")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(10)
@@ -97,8 +134,17 @@ struct albumView : View {
 
 struct extraView : View {
     var body: some View {
-        Text("Implement Me")
-    }
+        HStack {
+            Image(systemName: "chevron.down")
+
+            Spacer()
+
+            Image(systemName: "ellipsis")
+        }
+        .font(.title2)
+        .foregroundStyle(.white)
+        .padding(.horizontal)
+}
 }
 
 #Preview {
